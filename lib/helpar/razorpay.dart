@@ -19,13 +19,12 @@ class RazorPayHelpar{
       'name': 'Acme Corp.',
       'description': 'Fine T-Shirt',
       'prefill': {
-        'contact': '8888888888',
+        'contact': '+8801300503082',
         'email': 'info@gmail.com'
       }
     };
 
     razorpay.open(options);
-
 
   }
 
@@ -34,6 +33,7 @@ class RazorPayHelpar{
   void handlePaymentSuccess(PaymentSuccessResponse response) {
 
     print("Transaction ID: ${response.paymentId}");
+
     Fluttertoast.showToast(
         msg: "Payment Success",
         toastLength: Toast.LENGTH_SHORT,
